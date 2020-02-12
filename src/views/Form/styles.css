@@ -1,0 +1,431 @@
+.no-margin {
+  margin: 0;
+  padding: 0;
+}
+
+.progress-bar {
+  width: 80%;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+}
+
+.form-style-1 {
+	margin: 0px auto;
+	max-width: 600px;
+	padding: 0px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+	padding: 0px;
+	display: block;
+  list-style: none;
+  margin: 0px;
+	margin-top: 10px;
+}
+.form-style-1 label{
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+.form-style-1 input[type=tel],
+textarea, 
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 5px;
+  margin: 0px;
+  animation-delay: 100;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 input[type=tel]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+  width: 49.5%;
+  text-align: center;
+}
+
+p.field-divided{
+  margin-right: 10%;
+  text-align: center;
+  color: black;
+  display: inline;
+}
+
+p.center-p{
+  text-align: center;
+  color: black;
+  display: inline;
+}
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+
+.form-style-1 .field-thirds{
+	width: 20%;
+}
+
+.form-style-1 .field-select{
+	width: 100%;
+}
+.form-style-1 .field-textarea{
+	height: 65px;
+}
+@media (max-width: 700px) {
+  .form-style-1 .field-divided{
+    width: 40%;
+  }
+  .form-style-1 .field-long{
+    width: 80%;
+  }
+  .form-style-1 .field-select{
+    width: 80%;
+  }
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+  color: #fff;
+  margin: 0px;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.form-style-1 .required{
+	color: red;
+}
+
+
+#App {
+  font-family: sans-serif;
+
+  /* Give app full page to work with */
+  height: 100vh;
+}
+
+#page-wrap {
+  text-align: center;
+
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white;
+}
+
+/* The rest copied directly from react-burger-menu docs */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  float: right;
+}
+
+@media (max-width: 700px) {
+  .bm-menu {
+    width: 35%;
+  }
+
+  .bm-burger-button {
+    width: 30px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 700px) {
+  .bm-menu {
+    width: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .bm-menu {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bm-menu {
+    width: 20%;
+  }
+}
+
+.bm-menu-wrap {
+ position: 'fixed';
+ height: 100%;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #f2f2f2;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+  outline:0;
+}
+
+div, .menu-item {
+  outline: none;
+
+}
+
+.slide {
+  display: 'flex';
+  align-items: 'center';
+  justify-content: 'center';
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide 0.5s forwards;
+  animation-delay: 1s;
+}
+
+.slide-home {
+  position: absolute;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide 0.5s forwards;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 9px;
+  }
+  h6 {
+    font-size: 8px;
+  }
+  a {
+    font-size: 12px;
+  }
+  i {
+    font-size: 12px;
+  }
+  b {
+    font-size: 12px;
+    color: maroon;
+  }
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  h6 {
+    font-size: 10px;
+  }
+  a {
+    font-size: 14px;
+  }
+  i {
+    font-size: 14px;
+  }
+  b {
+    font-size: 14px;
+    color: maroon;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 23px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  h5 {
+    font-size: 13px;
+  }
+  h6 {
+    font-size: 10px;
+  }
+  a {
+    font-size: 15px;
+  }
+  i {
+    font-size: 15px;
+  }
+  b {
+    font-size: 15px;
+    color: maroon;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18.72px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 13.28px;
+  }
+  h6 {
+    font-size: 10.72px;
+  }
+  a {
+    font-size: 16px;
+  }
+  i {
+    font-size: 16px;
+  }
+  b {
+    color: maroon;
+    font-size: 16px;
+  }
+}
+/* 
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select:focus,
+textarea {
+  font-size: 16px;
+} */
