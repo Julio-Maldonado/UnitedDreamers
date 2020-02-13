@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 // import Form from './views/Form';
-import Form from './views/Form/index2';
+import Form from './views/Form/index';
 
 const determineScreenState = (width) => {
   if (width > 1500) {
