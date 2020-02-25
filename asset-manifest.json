@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/UnitedDreamers/static/css/main.9b426ee8.chunk.css",
-    "main.js": "/UnitedDreamers/static/js/main.a17ed766.chunk.js",
-    "main.js.map": "/UnitedDreamers/static/js/main.a17ed766.chunk.js.map",
+    "main.js": "/UnitedDreamers/static/js/main.e55721f8.chunk.js",
+    "main.js.map": "/UnitedDreamers/static/js/main.e55721f8.chunk.js.map",
     "runtime-main.js": "/UnitedDreamers/static/js/runtime-main.7a68751b.js",
     "runtime-main.js.map": "/UnitedDreamers/static/js/runtime-main.7a68751b.js.map",
-    "static/js/2.594a948a.chunk.js": "/UnitedDreamers/static/js/2.594a948a.chunk.js",
-    "static/js/2.594a948a.chunk.js.map": "/UnitedDreamers/static/js/2.594a948a.chunk.js.map",
+    "static/js/2.efa4df1b.chunk.js": "/UnitedDreamers/static/js/2.efa4df1b.chunk.js",
+    "static/js/2.efa4df1b.chunk.js.map": "/UnitedDreamers/static/js/2.efa4df1b.chunk.js.map",
     "index.html": "/UnitedDreamers/index.html",
-    "precache-manifest.74932f8b821e8092b0f89e5d8189dd1a.js": "/UnitedDreamers/precache-manifest.74932f8b821e8092b0f89e5d8189dd1a.js",
+    "precache-manifest.6cb27e7eaec96211b3b26dfdb69e7969.js": "/UnitedDreamers/precache-manifest.6cb27e7eaec96211b3b26dfdb69e7969.js",
     "service-worker.js": "/UnitedDreamers/service-worker.js",
     "static/css/main.9b426ee8.chunk.css.map": "/UnitedDreamers/static/css/main.9b426ee8.chunk.css.map",
-    "static/js/2.594a948a.chunk.js.LICENSE.txt": "/UnitedDreamers/static/js/2.594a948a.chunk.js.LICENSE.txt",
+    "static/js/2.efa4df1b.chunk.js.LICENSE.txt": "/UnitedDreamers/static/js/2.efa4df1b.chunk.js.LICENSE.txt",
     "static/media/UnitedDreamers.png": "/UnitedDreamers/static/media/UnitedDreamers.bd27bed7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7a68751b.js",
-    "static/js/2.594a948a.chunk.js",
+    "static/js/2.efa4df1b.chunk.js",
     "static/css/main.9b426ee8.chunk.css",
-    "static/js/main.a17ed766.chunk.js"
+    "static/js/main.e55721f8.chunk.js"
   ]
 }
