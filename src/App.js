@@ -30,28 +30,28 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        {/* <Helmet>
-          <title>Yeux Technologies</title>
+        <Helmet>
+          <title>United Dreamers</title>
           <meta
               name="description"
-              content="Yeux have big goals and we want to help you achieve them. We design and develop websites, mobile apps, social media automations and any other techincal solution you might need. Our goal is to support small minority-owned business using our expertise in web development, mobile app development, logo designs, SEO, marketing, and social media. Let us help yeux."
+              content="Our DACA community strongly supports each other - this form is intended for business owners who are also Dreamers so that our community can rally and support each other as DACA recipients."
             />
             <meta
               property="og:title"
-              content="Yeux Technologies"
+              content="United Dreamers"
             />
             <meta
               property="og:description"
-              content="Yeux have big goals and we want to help you achieve them. We design and develop websites, mobile apps, social media automations and any other techincal solution you might need. Our goal is to support small minority-owned business using our expertise in web development, mobile app development, logo designs, SEO, marketing, and social media. Let us help yeux."
+              content="Our DACA community strongly supports each other - this form is intended for business owners who are also Dreamers so that our community can rally and support each other as DACA recipients."
             />
             <meta
               property="og:image"
               content="/logo192.png"
             />
-            <meta property="og:url" content="yeux.tech"/>
-            <meta property="og:site_name" content="Yeux Technologies"/>
+            <meta property="og:url" content="uniteddreamers.juliomaldonado.com"/>
+            <meta property="og:site_name" content="United Dreamers"/>
             <meta property="og:type" content="website" />
-        </Helmet> */}
+        </Helmet>
         <Form {...props}/>
       </div>
     );
