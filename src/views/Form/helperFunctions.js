@@ -1,16 +1,37 @@
-const sendEmail = async ({ name, emailAddress, subject, message }) => {
+const addCompany = async (body) => {
   try {
+    console.log(JSON.stringify(body))
     const resp = await fetch(
-      'https://blooming-beyond-72124.herokuapp.com/api/send_email',
+      // 'https://blooming-beyond-72124.herokuapp.com/api/send_email',
+      'https://united-dreamers-backend.herokuapp.com/createCompany',
       {
         mode: 'cors',
         method: 'POST',
-        body: JSON.stringify({ name, emailAddress, subject, message }),
+        body: JSON.stringify(body),
+        // body: body,
         headers: {
+          // 'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
       },
     );
+
+    return resp.json();
+  } catch (e) {
+    return { success: false };
+  }
+};
+
+const sendEmail = async (body) => {
+  try {
+    const resp = await fetch('https://blooming-beyond-72124.herokuapp.com/api/send_email', {
+      mode: 'cors',
+      method: 'POST',
+      body: JSON.stringify({ 'email': body }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
     return resp.json();
   } catch (e) {
@@ -38,7 +59,7 @@ const handleCustomStylings = (screenState, width) => {
     strokeWidth = 0.9
   } else if (screenState === "mobile") {
     imageMaxWidth = width * 0.8;
-    paddingTop = "3vh";
+    paddingTop = "0vh";
     strokeWidth = 1.5
   }
   return {imageMaxWidth, paddingTop, strokeWidth}
@@ -56,9 +77,24 @@ const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
+const determineScreenState = (width) => {
+  if (width > 1500) {
+    return "wide";
+  } else if (width > 1200) {
+    return "full";
+  } else if (width > 900) {
+    return "pacman";
+  } else if (width > 700) {
+    return "half";
+  }
+  return "mobile";
+}
+
 export {
   sleep,
+  addCompany,
   sendEmail,
   handleCustomStylings,
+  determineScreenState,
   validateZipCode
 };

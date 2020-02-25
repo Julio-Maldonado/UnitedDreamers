@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ThirdPageFormInput = ({ userInput, handleChange, errors, register, zipCodeObj }) => (
+import { REGEX_PATTERNS } from './constants';
+
+const ThirdPageFormInput = ({ userInput, handleChange, handleKeyPress, errors, zipCodeObj }) => (
   <ul className="form-style-1">
     <br />
     <b>{userInput.companyName}</b>
@@ -10,14 +12,15 @@ const ThirdPageFormInput = ({ userInput, handleChange, errors, register, zipCode
         name="companyFacebookURL"
         className="field-long"
         placeholder="Company Facebook Link"
-        onChange={handleChange}
-        formNoValidate
-        ref={register({
-          pattern: {
-            value: /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/,
-            message: "Invalid Facebook Link"
-          }
+        handleKeyPress={handleKeyPress}
+        onChange={(e) => handleChange({
+          evt: e,
+          regex: REGEX_PATTERNS.website,
+          warningMessage: "Invalid Facebook Link"
         })}
+        value={userInput.companyFacebookURL}
+        formNoValidate
+        autoFocus
       />
       <br/><b>{errors.companyFacebookURL && errors.companyFacebookURL.message}</b>
     </li>
@@ -26,50 +29,49 @@ const ThirdPageFormInput = ({ userInput, handleChange, errors, register, zipCode
         name="companyInstagramUsername"
         className="field-long"
         placeholder="Company Instagram Username"
-        onChange={handleChange}
-        formNoValidate
-        ref={register({
-          pattern: {
-            value: /[a-z]\d?/gi,
-            message: "Invalid Instagram username"
-          }
+        handleKeyPress={handleKeyPress}
+        onChange={(e) => handleChange({
+          evt: e,
+          regex: REGEX_PATTERNS.socialUsername,
+          warningMessage: "Invalid Instagram username"
         })}
+        value={userInput.companyInstagramUsername}
+        formNoValidate
       />
-      <br/><b>{errors.companyInstagramUsername && errors.companyInstagramUsername.message}</b>
+      <br/>
+      <b>{errors.companyInstagramUsername && errors.companyInstagramUsername.message}</b>
     </li>
     <li>
       <input
         name="companyTwitterUsername"
         className="field-long"
         placeholder="Company Twitter Username"
-        onChange={handleChange}
-        formNoValidate
-        ref={register({
-          pattern: {
-            value: /[a-z]\d?/gi,
-            message: "Invalid Twitter username"
-          }
+        handleKeyPress={handleKeyPress}
+        onChange={(e) => handleChange({
+          evt: e,
+          regex: REGEX_PATTERNS.socialUsername,
+          warningMessage: "Invalid Twitter username"
         })}
+        value={userInput.companyTwitterUsername}
+        formNoValidate
       />
-      <br/><b>{errors.companyTwitterUsername && errors.companyTwitterUsername.message}</b>
+      <br/>
+      <b>{errors.companyTwitterUsername && errors.companyTwitterUsername.message}</b>
     </li>
     <li>
-      <form>
       <input
         name="zipCode"
         placeholder="Zip Code"
-        onChange={handleChange}
-        formNoValidate
-        autoComplete={"off"}
-        ref={register({
-          required: 'Required',
-          pattern: {
-            value: /^\d{5}$|^\d{5}-\d{4}$/,
-            message: "Invalid Zip Code"
-          }
+        handleKeyPress={handleKeyPress}
+        onChange={(e) => handleChange({
+          evt: e,
+          regex: REGEX_PATTERNS.zipCode,
+          warningMessage: "Invalid Zip Code"
         })}
+        value={userInput.zipCode}
+        formNoValidate
       />
-      </form>
+      <br/>
       {errors.zipCode ?
         <b>{errors.zipCode.message}</b>
         :

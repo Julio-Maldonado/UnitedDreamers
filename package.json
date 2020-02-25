@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://julio-maldonado.github.io/UnitedDreamers/",
   "dependencies": {
+    "@fortawesome/react-fontawesome": "0.1.4",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
