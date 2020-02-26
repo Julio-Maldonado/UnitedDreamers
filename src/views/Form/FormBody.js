@@ -309,11 +309,11 @@ class FormBody extends React.Component {
             <br />
             {
               buttonText1 &&
-                <button onClick={(e) => this.onFormSubmit(e, 'reverse')}>{buttonText1}</button>
+                <button style={{marginRight: buttonText2 ? '5vw' : 0}} onClick={(e) => this.onFormSubmit(e, 'reverse')}>{buttonText1}</button>
             }
             {
               buttonText2 &&
-                <button onClick={(e) => this.onFormSubmit(e, 'forward')}>{buttonText2}</button>
+                <button style={{marginLeft: buttonText1 ? '5vw' : 0}} onClick={(e) => this.onFormSubmit(e, 'forward')}>{buttonText2}</button>
             }
           </form>
           {

@@ -9,11 +9,11 @@ import { SOCIAL_DATA } from './constants';
 
 const CompleteForm = ({ zipCodeObj, userInput }) => (
   <div>
-    <p>Thanks for submitting {userInput.companyName}, {userInput.firstName}! We're making a platform for DACA owned businesses and will reach out for more info if needed.</p>
-    <br/>
+    <p>Thanks for submitting {userInput.companyName}, {userInput.firstName}!</p>
+    <p>We're making a platform for DACA owned businesses and will reach out for more info if needed.</p>
     <p>Join our United Dreamers Facebook page as we grow our community!</p>
-    <button style={{"color": "#3b5998"}} onClick={() => {window.open('https://www.facebook.com/groups/2524403604498738/about/')}}>
-      Go to Facebook Community
+    <button style={{'color': '#3b5998', 'fontSize': 16}} onClick={() => {window.open('https://www.facebook.com/groups/2524403604498738/about/')}}>
+      Join Facebook Community
     </button>
     {/* <ul className="icons">
       {SOCIAL_DATA.map(s => (
