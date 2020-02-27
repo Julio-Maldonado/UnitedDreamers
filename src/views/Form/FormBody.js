@@ -182,6 +182,7 @@ class FormBody extends React.Component {
           }
         })
         console.log({...userInput, ...this.zipCodeObj})
+        sendEmail({...userInput, ...this.zipCodeObj})
         addCompany({...userInput, ...this.zipCodeObj}).then(({ success }) => {
           // setUserInput({ loading: false });
           // openModal();

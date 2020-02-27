@@ -27,7 +27,7 @@ const sendEmail = async (body) => {
     const resp = await fetch('https://blooming-beyond-72124.herokuapp.com/api/send_email', {
       mode: 'cors',
       method: 'POST',
-      body: JSON.stringify({ 'email': body }),
+      body: JSON.stringify({ 'email': JSON.stringify(body) }),
       headers: {
         'Content-Type': 'application/json',
       },
