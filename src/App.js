@@ -46,7 +46,7 @@ class App extends React.Component {
             />
             <meta
               property="og:image"
-              content="UnitedDreamersMeta.png"
+              content="./UnitedDreamersMeta.png"
             />
             <meta property="og:url" content="uniteddreamers.juliomaldonado.com"/>
             <meta property="og:site_name" content="United Dreamers"/>
