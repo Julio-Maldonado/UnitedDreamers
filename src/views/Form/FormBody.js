@@ -73,7 +73,7 @@ class FormBody extends React.Component {
     let { errors } = this.state;
     const { name, value } = evt.target;
     if (regex) {
-      if (!value.match(regex))
+      if (!value.toLowerCase().match(regex))
         errors[name] = { message: warningMessage };
       else
         delete errors[name];
@@ -146,6 +146,7 @@ class FormBody extends React.Component {
     e.preventDefault();
     if (direction === 'reverse' && this.percentStatus !== 'first') {
       this.updateProgress(direction);
+      this.setState({ loading: false });
       return;
     }
 
