@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/UnitedDreamers/precache-manifest.9b10456336550fe812b4e9c5ebfc4e04.js"
+  "/UnitedDreamers/precache-manifest.5b8b430b2aaf8dc623ec1e14e1f44add.js"
 );
 
 self.addEventListener('message', (event) => {
