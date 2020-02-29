@@ -206,6 +206,7 @@ class FormBody extends React.Component {
         this.validateFormInput('services', this.state) &&
         this.validateFormInput('category', this.state)
       ) {
+        sendEmail({...userInput, ...this.zipCodeObj})
         this.updateProgress(direction);
         return;
       }
@@ -218,6 +219,7 @@ class FormBody extends React.Component {
         this.validateNoError('phoneNumber') &&
         this.validateFormInput('companyName', this.state)
       ) {
+        sendEmail({...userInput, ...this.zipCodeObj})
         this.updateProgress(direction);
         return;
       }
